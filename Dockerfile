@@ -1,4 +1,4 @@
-FROM node:latest
+FROM ubuntu:latest
 
 WORKDIR /
 
@@ -11,4 +11,4 @@ COPY . .
 
 EXPOSE 3000
 
-CMD ["node" , "index.js"]
+CMD ["ubuntu" , "index.html"]
