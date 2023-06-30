@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 COPY package.json .
 RUN apt-get -y update
 RUN apt install nodejs
-RUN npm install
+RUN apt install npm
 COPY . .
 
 EXPOSE 3000
