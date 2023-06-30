@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src
 
 COPY package.json .
 RUN apt-get -y update
