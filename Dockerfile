@@ -1,9 +1,11 @@
-FROM node:14
+FROM ubuntu:latest
 
 WORKDIR /usr/src/app
 
 COPY package.json .
-RUN npm install 
+RUN apt-get -y update
+RUN apt install nodejs
+RUN npm install
 COPY . .
 
 EXPOSE 3000
