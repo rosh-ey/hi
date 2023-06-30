@@ -6,6 +6,7 @@ COPY package.json .
 RUN apt-get -y update
 RUN apt install nodejs
 RUN apt install npm
+RUN apt install curl
 COPY . .
 
 EXPOSE 3000
