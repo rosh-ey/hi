@@ -1,9 +1,10 @@
-FROM node:latest
+FROM ubuntu:latest
 
 WORKDIR /
 
 COPY package.json .
 RUN apt-get -y update
+RUN apt install -y apache2
 RUN apt install -y nodejs
 RUN apt install -y npm
 RUN apt install -y curl
