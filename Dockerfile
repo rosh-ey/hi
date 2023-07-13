@@ -1,14 +1,8 @@
-FROM ubuntu:latest
+FROM node:latest
 
-WORKDIR /
+WORKDIR /app
 
-COPY package.json .
-RUN apt-get -y update
-RUN apt install -y nodejs
-RUN apt install -y npm
-RUN apt install -y curl
-COPY . .
-
+COPY package.json index.js /app/
+RUN npm i
 EXPOSE 3000
-
-CMD ["ubuntu" , "index.html"]
+CMD ["node" , "index.js"]
