@@ -1,8 +1,8 @@
-FROM node:latest
+FROM nodejs:latest
 
 WORKDIR /app
 
 COPY package.json index.js /app/
 RUN npm i
 EXPOSE 3000
-CMD ["node" , "index.js"]
+CMD ["nodejs" , "index.js"]
