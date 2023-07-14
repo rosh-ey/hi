@@ -10,5 +10,5 @@ jobs:
     - name: Build and push Docker image
       run: |
          echo "${{ secrets.DOCKERPW }}" | docker login -u "albimonish" --password-stdin
-         docker build -t albimonish/node .
-         docker push albimonish/node:latest
+         docker build -t albimonish/nodejs .
+         docker push albimonish/nodejs:latest
