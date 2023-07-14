@@ -9,9 +9,8 @@ jobs:
   
     - name: Build and push Docker image
       run: |
-	      echo ${{ secrets.DOCKER_USER }}
-        echo ${{ secrets.DOCKER_SECRET }}
-        docker build -t app .
+	echo ${{ secrets.DOCKER_USER }} |echo ${{ secrets.DOCKER_SECRET }}
+
         docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_SECRET }}
         docker tag app arnoldroshan/test
-	      docker push arnoldroshan/test
+	docker push arnoldroshan/test
