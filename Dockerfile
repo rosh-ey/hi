@@ -1,9 +1,12 @@
 FROM node:latest
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
-COPY package.json  ./
+COPY package.json ./
+
+RUN npm install
+
 COPY . .
-RUN npm install -g npm@9.8.0
-EXPOSE 3000
-CMD ["nodejs-agent" , "index.js" , "express.js" , "tensorflow.js"]
+
+EXPOSE 4000
+CMD [ "node", "index.js" ]
